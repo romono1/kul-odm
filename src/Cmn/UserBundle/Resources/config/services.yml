@@ -1,0 +1,4 @@
+services:
+#    cmn_user.example:
+#        class: Cmn\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
