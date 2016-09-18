@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: CustomConfig/sonata_admin_config.yml }
+    - { resource: CustomConfig/fosuser_config.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -78,3 +79,8 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+#MongoDB ACL
+dinhkhanh_mongo_db_acl:
+    acl_provider:
+        default_database: test_database

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "311d9765c0fc42f51afd7dde5154d88a",
-    "content-hash": "798b7d6d41b067d02f351872052280a2",
+    "hash": "e53e900875179bb6c00b980d2dbb5fdd",
+    "content-hash": "2855c7781816123b79a55c9f8548a36d",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -70,6 +70,58 @@
                 "slugify"
             ],
             "time": "2016-08-09 20:10:17"
+        },
+        {
+            "name": "dinhkhanh/mongodb-acl-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dinhkhanh/MongoDBAclBundle.git",
+                "reference": "95e68f0046a236e79b018e7617c09173ebbf0798"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dinhkhanh/MongoDBAclBundle/zipball/95e68f0046a236e79b018e7617c09173ebbf0798",
+                "reference": "95e68f0046a236e79b018e7617c09173ebbf0798",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/mongodb-odm-bundle": "~3.0",
+                "php": ">=5.5.9",
+                "symfony/console": "~3.0",
+                "symfony/framework-bundle": "~3.0",
+                "symfony/security": "~3.0",
+                "symfony/security-acl": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.4",
+                "symfony/browser-kit": "~3.0",
+                "symfony/security-bundle": "~3.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Dinhkhanh\\MongoDBAclBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "contributors",
+                    "homepage": "https://github.com/dinhkhanh/MongoDBAclBundle/contributors"
+                }
+            ],
+            "description": "MongoDB ACL Bundle",
+            "homepage": "https://github.com/dinhkhanh/MongoDBAclBundle",
+            "keywords": [
+                "acl",
+                "mongodb",
+                "security"
+            ],
+            "time": "2016-09-12 09:31:21"
         },
         {
             "name": "doctrine/annotations",
@@ -1070,6 +1122,78 @@
                 "orm"
             ],
             "time": "2016-01-05 21:34:58"
+        },
+        {
+            "name": "friendsofsymfony/user-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
+                "reference": "4cb7a29869e4a9bef4f51986d48b1a3af76d3f48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/4cb7a29869e4a9bef4f51986d48b1a3af76d3f48",
+                "reference": "4cb7a29869e4a9bef4f51986d48b1a3af76d3f48",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "symfony/form": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/security-bundle": "~2.3|~3.0",
+                "symfony/twig-bundle": "~2.3|~3.0"
+            },
+            "conflict": {
+                "symfony/doctrine-bridge": "<2.3"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.3",
+                "swiftmailer/swiftmailer": "~4.3|~5",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0",
+                "symfony/validator": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0",
+                "willdurand/propel-typehintable-behavior": "~1.0"
+            },
+            "suggest": {
+                "willdurand/propel-typehintable-behavior": "Needed when using the propel implementation"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FOS\\UserBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSUserBundle/contributors"
+                },
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com"
+                }
+            ],
+            "description": "Symfony FOSUserBundle",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "User management"
+            ],
+            "time": "2016-09-12 15:04:02"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -3155,7 +3279,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "friendsofsymfony/user-bundle": 20,
+        "dinhkhanh/mongodb-acl-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

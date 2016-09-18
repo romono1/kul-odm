@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+                    http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
+
+    <document name="Cmn\UserBundle\Document\User" collection="users">
+
+        <field fieldName="id" id="true" />
+        <field fieldName="groups" reference="true" type="collection" />
+        <reference-many field="groups" target-document="Cmn\UserBundle\Document\Group" store-as="id" />
+
+    </document>
+
+</doctrine-mongo-mapping>

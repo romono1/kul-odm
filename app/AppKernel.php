@@ -8,6 +8,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = [
+            // core bundle
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -16,12 +17,18 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
+            //end
 
-            // my bundle
-            new Cmn\UserBundle\CmnUserBundle(),
 
             // mongodb mapping
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
+            //end
+
+            // extenel bundle
+            new Dinhkhanh\MongoDBAclBundle\MongoDBAclBundle(),
+            //end
+
+
 
             // sonata bundle
             new Sonata\CoreBundle\SonataCoreBundle(),
@@ -33,7 +40,18 @@ class AppKernel extends Kernel
             new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
 
             new Sonata\AdminBundle\SonataAdminBundle(),
-            // ...
+            //end
+
+            // fosuser bundle
+            new FOS\UserBundle\FOSUserBundle(),
+            //end
+
+
+
+
+            // my bundle
+            new Cmn\UserBundle\CmnUserBundle(),
+            //end
 
         ];
 
